@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 export default function TextForms(props) {
     // text is a varibale and settext is function
-    const [text, setText] = useState("Enter a Text ( this will call using useState in text variable and we can update the value using setText )");
+    const [text, setText] = useState('');
 
 
     const handleUpClick = () => {
@@ -14,23 +14,23 @@ export default function TextForms(props) {
         setText(newText);
     }
 
-    const handleLoClick = ()=>{
+    const handleLoClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
     }
 
-    const handleClearClick = ()=> {
+    const handleClearClick = () => {
         let newText = '';
         setText(newText)
     }
 
-    const handleCopyClick = ()=>{
+    const handleCopyClick = () => {
         let text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
     }
 
-    const handleExtraSpaces = ()=> {
+    const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
     }
@@ -42,12 +42,12 @@ export default function TextForms(props) {
 
     return (
         <>
-            <div className='container'>
+            <div>
                 <form>
                     <div className="form-group">
                         <h2>{props.TextForm_Title}</h2>
-                        <textarea className="form-control mb-2" rows="6" value={text} onChange={handleOnChange} id="myBox"></textarea>
-                        <div className="allBTN d-flex justify-content-center">
+                        <textarea className="form-control mb-2" rows="6" value={text} onChange={handleOnChange} id="myBox" placeholder="Write here....."></textarea>
+                        <div className="allBTN ">
                             <button type="button" className="btn btn-danger m-2" onClick={handleUpClick}>Convert to UpperCase</button>
                             <button type="button" className="btn btn-danger m-2" onClick={handleLoClick}>Convert to LowerCase</button>
                             <button type="button" className="btn btn-danger m-2" onClick={handleClearClick}>Clear Text</button>

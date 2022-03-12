@@ -1,4 +1,9 @@
-.navbar-logo-text{
-    font-weight: bold;
-    color: forestgreen !important;
+.navbar-logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #dc3545 !important;
+}
+
+.nav-link {
+  font-weight: bold;
 }

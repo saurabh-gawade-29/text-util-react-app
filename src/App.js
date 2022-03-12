@@ -12,11 +12,11 @@ import About from "./components/About/About";
 function App() {
   return (
     <>
-      <Navbar title="TEXT_UTIL" about_title="AboutUs" />
+      <Navbar title="TEXT_UTILS" about_title="AboutUs" />
       {/* <Alert/> */}
       <div className="container my-4">
         <Routes>
-          <Route path="/" element={<TextForms TextForm_Title="Enter a text to do following operations"/>} />
+          <Route path="/" element={<TextForms TextForm_Title="Enter a text to do following operations" />} />
           <Route path="about" element={<About />} />
         </Routes>
       </div>
