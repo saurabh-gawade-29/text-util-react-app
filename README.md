@@ -2,9 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Demo
-
-Link [text_utils](https://text-utils-2925.herokuapp.com/)
 
 ## Lessons Learned
 
